@@ -1,0 +1,32 @@
+{
+    "amazon": {
+        "awsId": "",
+        "awsSecret": "",
+        "assocId": "",
+        "endPoint" : "ecs.amazonaws.com",
+        "baseUri" : "/onca/xml",
+        "service" : "AWSECommerceService",
+        "version" : "2010-01-25",
+        "requestMethod" : "GET",
+
+        "itemLookup" : {
+            "condition" : "All",
+            "idType" : "ASIN"
+        },
+
+        "itemSearch" : {
+            "condition" : "All",
+            "availability" : "Available",
+            "browseNode" : 1000,
+            "searchIndex" :"Books"
+        },
+
+        "similarityLookup" : {
+            "condition" : "All",
+            "similarityType" : "Intersection"
+        }
+    },
+    "app": {
+        "port": 8090
+    }
+}
